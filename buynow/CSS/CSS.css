@@ -1,0 +1,90 @@
+
+body{
+  z-index: 1;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.8vh;
+  background-color: black;
+  justify-content: center;
+}
+.logo-fixed{
+  border-radius: 50%;
+}
+.RightContent
+{
+  background-color: black;
+  overflow: auto;
+  height: 80vh;
+}
+.LeftContent
+{
+  background-color: black;
+  height: 80vh;
+}
+.centered {
+  position: relative;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  justify-content: center;
+}
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+#cube {
+  margin-top: 100px;
+}
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(black, black, black, 0.6);
+  text-align: center;
+  border-radius: 5px;
+}
+.cube{
+  animation: mymove 10s infinite;
+}
+@keyframes mymove{
+  0%{transform: rotate3d(0);}
+  20%{transform: rotate3d(1, 1, 1, 45deg);}
+  40%{transform: rotate3d(2, -1, -1, -0.2turn);}
+  60%{transform: rotate3d(0, 1, 0.5, 3.142rad);}
+  80%{transform: rotate3d(2, -1, -1, 0.2turn);}
+  100%{transform: rotate3d(0);}
+}
+.cube__face--front  {transform: rotateY(  0deg); }
+.cube__face--right  { transform: rotateY( 90deg); }
+.cube__face--back   { transform: rotateY(180deg); }
+.cube__face--left   { transform: rotateY(-90deg); }
+.cube__face--top    { transform: rotateX( 90deg); }
+.cube__face--bottom { transform: rotateX(-90deg); }
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+
+footer{
+  height: 20vh;
+  background-color: #1C2833;
+  padding: 30px;
+}
+footer ul{
+  list-style: none;
+  margin-top: 30px;
+}
+
+@media (max-width: 1280px){
+  .LeftContent{
+    height: 60vh;
+  }
+  .RightContent{
+    height: auto;
+  }
+}
